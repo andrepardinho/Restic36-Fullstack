@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background: #1a1727;
+    font-family: 'Poppins',sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+    margin: 4%;
+}
+
+.card {
+    position: relative;
+    width: 280px;
+    height: 450px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    background: #1a1727;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-area {
+    width: 100%;
+    height: 200px;
+}
+
+.img-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info {
+    padding: 15px;
+    text-align: center;
+    color: #ddd;
+}
+
+.info h3 {
+    font-size: 23px; 
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.info h4 {
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.info p {
+    color: #a0a0a0;
+    text-align: justify;
+    margin: 0 auto;
+    font-size: 13px;
+    line-height: 17px; 
+    font-weight: 400;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do card quando o mouse está sobre ele */
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.8); /* Aumenta a sombra para um efeito mais destacado */
+}
+
+.card:hover .info {
+    background: rgba(255, 255, 255, 0.01); /* Adiciona um fundo translúcido para a área de informações */
+}
+
+@media (max-width: 650px) {
+    .card:nth-child(1) img {
+        content: url(assets/images/balerion2.png);
+        width: 100%; 
+        height: auto;
+    }
+    .card:nth-child(2) img {
+        content: url(assets/images/meleys2.jpg);
+    }
+    .card:nth-child(3) img {
+        content: url(assets/images/syrax2.jpg);
+    }
+}
